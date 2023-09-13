@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-spring-hello-deployment
+  labels:
+    app: kube-spring-hello
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kube-spring-hello
+  template:
+    metadata:
+      labels:
+        app: kube-spring-hello
+    spec:
+      containers:
+        - name: kube-spring-hello
+          image: keomonykhun/kubespringhello:0.0.2
+          ports:
+            - containerPort: 8080

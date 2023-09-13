@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service-kube-spring-hello
+spec:
+  selector:
+    app: kube-spring-hello
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
