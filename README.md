@@ -6,6 +6,14 @@ References:
 
 3: Kubernetes deployment and service: [Click here](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
+4: Ingress: [Click here](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+[quick start](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start)
+
+5: namespace: [Click here](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+[example:](https://cloud.google.com/blog/products/containers-kubernetes/kubernetes-best-practices-organizing-with-namespaces)
+we create a namespace then we create a deployment and service in that namespace.
+
+
 
 Steps to run the application:
 build an image
