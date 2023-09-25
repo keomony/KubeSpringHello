@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: kube-spring-hello
-          image: keomonykhun/kubespringhello:0.0.2
+          image: keomonykhun/kubespringhello:0.0.3
           ports:
             - containerPort: 8080

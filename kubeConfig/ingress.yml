@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   creationTimestamp: null
   name: my-ingress-kube-spring-hello
+  namespace: kube-spring-namespace
 spec:
   ingressClassName: nginx
   rules:
@@ -10,26 +11,7 @@ spec:
         paths:
           - backend:
               service:
-                name: my-service-kube-spring-hello
-                port:
-                  number: 80
-            path: /foo
-            pathType: Prefix
-    - http:
-        paths:
-          - backend:
-              service:
-                name: my-service-kube-spring-hello
-                port:
-                  number: 80
-            path: /
-            pathType: Prefix
-    - host: dem.localdev.me
-      http:
-        paths:
-          - backend:
-              service:
-                name: my-service-kube-spring-hello
+                name: my-service-talk-to-kube-spring-hello
                 port:
                   number: 80
             path: /

@@ -22,12 +22,15 @@ tag the image with a different version each time, 0.0.1-SNAPSHOT is your build v
 You can change it in build.gradle file.
 keomonykhun is your docker username.
 kubespringhello:0.0.2 is your image name and version.
+demo:0.0.1-SNAPSHOT is your application name and version.
 2- docker tag demo:0.0.1-SNAPSHOT keomonykhun/kubespringhello:0.0.2
 push the image to docker hub
 3- docker push keomonykhun/kubespringhello:0.0.2
 create a deployment and service in kubernetes
-4- kubectl apply -f kubeConfig/deploy.yml
+Make sure spec.containers.image is the same as the image you pushed to docker hub
+4- kubectl apply -f kubeConfig/deploy.yml 
 5- kubectl apply -f kubeConfig/service.yml
 port forward to the application using deployment name and port. 
-8080 (exposed port) is the port of the application and 9090 is the port of the host machine.
-6- kubectl port-forward deployment/kube-spring-hello-deployment 9090:8080
+9090 (exposed port) is the port of the application and 8080 is the port of the host machine.
+6- kubectl port-forward deployment/kube-spring-hello-deployment 8080:9090
+7- open browser and go to http://localhost:8080/
