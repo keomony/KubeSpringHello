@@ -7,5 +7,5 @@ spec:
     app: kube-spring-hello
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 80 # This is the port of the service that it exposes to the outside world
+      targetPort: 8080 # This is the port of the container
