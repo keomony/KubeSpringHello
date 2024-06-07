@@ -1,5 +1,5 @@
 port forward to the application using deployment name and port.
-9090 (exposed port) is the port of the application and 8080 is the port of the host machine.
+9090 (exposed port) is the port of the application and 8081 is the port of the host machine.
 6- kubectl port-forward deployment/kube-spring-hello-deployment 8081:9090
 7- open browser and go to http://localhost:8081/
 

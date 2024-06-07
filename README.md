@@ -31,6 +31,6 @@ Make sure spec.containers.image is the same as the image you pushed to docker hu
 4- kubectl apply -f kubeConfig/deploy.yml 
 5- kubectl apply -f kubeConfig/service.yml
 port forward to the application using deployment name and port. 
-9090 (exposed port) is the port of the application and 8080 is the port of the host machine.
-6- kubectl port-forward deployment/kube-spring-hello-deployment 8080:9090
-7- open browser and go to http://localhost:8080/
+9090 (exposed port) is the port of local machine and 8080 is the port of the application remote in K8s container.
+6- kubectl port-forward deployment/kube-spring-hello-deployment 9090:8080
+7- open browser and go to http://localhost:9090/

@@ -8,4 +8,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80 # This is the port of the service that it exposes to the outside world
-      targetPort: 8080 # This is the port of the container
+      targetPort: 8080 # This is the port of the container in k8s
